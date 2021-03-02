@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 const compression = require('compression');
 const axios = require('axios');
@@ -7,7 +8,8 @@ const port = 3000;
 const imagesIP = '13.52.213.118:3006';
 const shoppingIP = '18.222.223.190:3004';
 const reviewsIP = '54.151.123.24:3002';
-const sellerIP = '3.21.248.149:3005';
+// const sellerIP = '3.21.248.149:3005';
+const sellerIP = 'localhost:3005';
 
 app.use(compression());
 app.use(express.json());
@@ -116,4 +118,17 @@ app.get('/item/images', (req, res) => {
 		.catch((err) => {
 			res.status('404');
 		});
+});
+
+// POST seller
+app.post('/items/:item_id/seller', (req, res) => {
+	let item_id = req.params.item_id;
+	axios
+		.post(`http://${sellerIP}/items/${item_id}/seller`)
+		.then((response) => {
+			res.status(200).send(response.data);
+		})
+		.catch((err) => {
+			res.status('404');
+		})
 });
