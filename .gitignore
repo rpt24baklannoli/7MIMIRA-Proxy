@@ -3,3 +3,4 @@ package-lock.json
 newrelic*
 *.pem
 *.sh
+loader*
