@@ -5,11 +5,11 @@ const axios = require('axios');
 const cors = require('cors');
 const app = express();
 const port = 3000;
-const imagesIP = '13.52.213.118:3006';
-const shoppingIP = '18.222.223.190:3004';
-const reviewsIP = '54.151.123.24:3002';
-// const sellerIP = '3.21.248.149:3005';
-const sellerIP = 'localhost:3005';
+const imagesIP = '3.101.55.156:3006';
+const shoppingIP = '13.52.16.25:3004';
+const reviewsIP = '54.176.185.40:3002';
+const sellerIP = '18.221.203.49:3005';
+// const sellerIP = 'localhost:3005';
 
 app.use(compression());
 app.use(express.json());
