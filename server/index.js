@@ -109,9 +109,9 @@ app.get('/shopping/items', (req, res) => {
 		});
 });
 
-app.get('/item/images', (req, res) => {
+app.get('/items/images', (req, res) => {
 	axios
-		.get(`http://${imagesIP}/item/images`)
+		.get(`http://${imagesIP}/items/images`)
 		.then((response) => {
 			res.status(200).send(response.data);
 		})
