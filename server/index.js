@@ -109,9 +109,10 @@ app.get('/shopping/items', (req, res) => {
 		});
 });
 
-app.get('/items/images', (req, res) => {
+app.get('/items/:item_id/images', (req, res) => {
+	let item_id = req.params.item_id;
 	axios
-		.get(`http://${imagesIP}/items/images`)
+		.get(`http://${imagesIP}/items/${item_id}/images`)
 		.then((response) => {
 			res.status(200).send(response.data);
 		})
