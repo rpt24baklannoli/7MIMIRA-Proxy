@@ -17,6 +17,8 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use('/items/:itemId', express.static('client'));
 
+app.use('/', express.static('client'));
+
 app.listen(port, () => {
 	// eslint-disable-next-line no-console
 	console.log(`Listening at http://localhost:${port}`);
