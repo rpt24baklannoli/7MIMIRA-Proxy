@@ -8,7 +8,8 @@ const port = 3000;
 const imagesIP = '3.101.55.156:3006';
 const shoppingIP = '13.52.16.25:3004';
 const reviewsIP = '54.176.185.40:3002';
-const sellerIP = '18.221.203.49:3005';
+const sellerIP = '52.14.110.39';
+// const sellerIP = '18.221.203.49:3005';
 // const sellerIP = 'localhost:3005';
 
 app.use(compression());
